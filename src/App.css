@@ -1,11 +1,12 @@
 .main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px auto;
+  justify-content: start;
+  
+  margin: 200px auto;
+  border-bottom: 2px solid gray;
 }
 
-.btn {
+/* .btn {
   border: 2px solid orange;
   color: transparent;
   padding: 10px 20px;
@@ -24,9 +25,9 @@
   left: 0;
   top: 0;
   transform: translate(-100%, -100%);
-    /* transform: rotate(120deg); */
-  /* transform: scaleX(0.00001); */
-  /* transform: translate(100%); */
+    transform: rotate(120deg); 
+   transform: scaleX(0.00001); 
+  transform: translate(100%);
 
   transition-duration: 500ms;
   transition-timing-function: ease;
@@ -39,7 +40,46 @@
 
 .btn:hover::after {
   transform: translate(0) scale(2);
-   /* transform: rotate(0) scale(1.1); */
-  /* transform: scaleX(1.1); */
+   transform: rotate(0) scale(1.1);
+  transform: scaleX(1.1);
 
+} */
+
+
+.box{
+height: 100px;width: 100px;background-color: #f1a707;
+border-radius: 50%;
+animation-name: circle;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+/* animation-direction: alternate; */
+}
+
+@keyframes circle {
+  0%{
+    transform: translate(0,0);
+
+    background-color: rgb(224, 222, 59);
+  }
+  /* 25%{
+    transform: translate(150px,-100px);
+    background-color: rgb(219, 131, 131);
+
+  } */
+  50%{
+    transform: translate(200px,-200px);
+    background-color: rgb(241, 79, 106);
+
+  }
+  /* 75%{
+    transform: translate(0,150px);
+    background-color: rgb(82, 6, 6);
+
+  } */
+  100%{
+    transform: translate(450px,0);
+    background-color: rgb(94, 40, 4);
+
+  }
 }
