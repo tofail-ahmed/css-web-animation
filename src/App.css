@@ -1,15 +1,16 @@
-/* .main {
+.main {
   display: flex;
-  justify-content: start;
-  
+  justify-content: center;
+
+align-items: center;
   margin: 200px auto;
-  border-bottom: 2px solid gray;
-} */
+  /* border-bottom: 2px solid gray; */
+}
 
 
 /* button css------------ */
 /* button css------------ */
-/* .btn {
+.btn {
   border: 2px solid orange;
   color: transparent;
   padding: 10px 20px;
@@ -46,13 +47,13 @@
    transform: rotate(0) scale(1.1);
   transform: scaleX(1.1);
 
-} */
+} 
 
 
 
 /* sunrise animation css---------------------- */
 /* sunrise animation css---------------------- */
-/* .box{
+ .box{
 height: 100px;width: 100px;background-color: #f1a707;
 border-radius: 50%;
 animation-name: circle;
@@ -80,7 +81,8 @@ animation-direction: alternate;
     background-color: rgb(94, 40, 4);
 
   }
-} */
+} 
+
 
 
 
@@ -93,20 +95,32 @@ padding: 0;
 margin: 0;
 box-sizing: border-box;
 }
-.main{
+/* .main{
 background-color: #212866;
 width: 100%;height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
 
-}
+} */
 .loading {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: loaderRotate 3s  infinite ;
+  animation-timing-function: ease-in-out;
 }
+/* @keyframes loaderRotate {
+ 
+    0%{
+      transform: rotate(0);
+    }
+    100%{
+      transform: rotate(180deg);
+    }
+  
+} */
 
 .loading div {
   position: absolute;
@@ -115,11 +129,11 @@ align-items: center;
 .glass {
   width: 100px;
   height: 100px;
-  background-color: rgba(110, 179, 41, 0.349);
-  border-radius: 10px;
+  background-color: rgb(255, 52, 1);
+  border-radius: 20% 50%;
   z-index: 3;
   backdrop-filter: blur(5px);
- animation: glassRotation 3s   infinite  ;
+ animation: glassRotation 1s   infinite  ;
 }
 
 @keyframes glassRotation {
@@ -138,7 +152,6 @@ align-items: center;
   height: 50px;
   background-color: rgb(255, 52, 1);
   border-radius: 50%;
-  box-shadow: rgb(68, 56, 52);
   
   animation-duration: 3s;
   transform: translate(-0,-0);
@@ -147,47 +160,31 @@ align-items: center;
   animation-iteration-count: infinite;
   
   animation-timing-function: ease-in-out;
-  z-index: 3; /* Set z-index to make sure the box goes over the glass */
+  z-index: 3;
 }
 .box-1{
-  /* transform: translate(-200px,-200px); */
   animation-name: circular-1;
-  /* animation-duration: 2s; */
 }
 .box-2{
-  /* transform: translate(-200px,200px); */
   animation-name: circular-2;
-  /* animation-duration: 2s; */
 } 
 .box-3{
-  /* transform: translate(-200px); */
   animation-name: circular-3;
-  /* animation-duration: 3s; */
 } 
  .box-4{
-  /* transform: translateY(-200px); */
   animation-name: circular-4;
-  /* animation-duration: 4s; */
 } 
  .box-5{
-  /* transform: translateY(-200px); */
   animation-name: circular-5;
-  /* animation-duration: 4s; */
 } 
  .box-6{
-  /* transform: translateY(-200px); */
   animation-name: circular-6;
-  /* animation-duration: 4s; */
 } 
  .box-7{
-  /* transform: translateY(-200px); */
   animation-name: circular-7;
-  /* animation-duration: 4s; */
 } 
  .box-8{
-  /* transform: translateY(-200px); */
   animation-name: circular-8;
-  /* animation-duration: 4s; */
 } 
 @keyframes circular-1 {
   0% {
@@ -303,4 +300,59 @@ align-items: center;
     transform: translateY(200px);
     z-index: 6;
   }
+}  
+
+
+/* //css clip path--------------------- */
+/* //css clip path--------------------- */
+.card-parent{
+  width: 500px;
+height: 200px;
+border: 1px solid black;
+padding: 20px;
+background-color: #d1db47;
+position: relative;
+}
+.card{
+width: 400px;
+height: 150px;
+
+padding: 20px;
+background-color: #d1d68b;
+border-radius: 20px;
+clip-path: circle(5% at 95% 20%);
+transition-duration: 300ms;
+position: absolute;
+top: 0;
+right: 0;
+}
+.card-child{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card:hover{
+  clip-path: circle(92.5% at 49% 30%);
+ 
+  background-color: #80880c;
+}
+.what{
+  color: rgb(245, 12, 59);
+  font-weight: bold;
+}
+
+
+/* //text animation css------------------- */
+/* //text animation css------------------- */
+
+.letter{
+  color: #a797a3;
+  font-size: 100px;
+  font-weight: 700;
+  transition-duration: 50ms;
+  
+}
+
+.container:hover .letter{
+  color: #f107be;
 }
