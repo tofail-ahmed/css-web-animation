@@ -349,10 +349,72 @@ right: 0;
   color: #a797a3;
   font-size: 100px;
   font-weight: 700;
-  transition-duration: 50ms;
+  /* transition-duration: 50ms; */
   
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .container:hover .letter{
-  color: #f107be;
+  /* color: #f107be; */
+  opacity: 1;
+  transform: translateY(0);
 }
+
+
+
+/* //tech css------------ */
+/* //tech css------------ */
+
+.tech-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.tech-item {
+  margin: 10px;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.tech-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.tech-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db;
+  transition-duration: 500ms;
+  transform-origin: right;
+}
+
+.tech-icon {
+  font-size: 36px;
+  margin-top: 5px;
+  opacity: 1;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+  
+}
+
+.tech-list:hover .tech-name {
+  color: #e74c3c;
+  transform: rotateX(360deg) scale(1.2);
+}
+
+.tech-list:hover .tech-icon {
+  opacity: 1;
+  transform: scale(1.8);
+}
+

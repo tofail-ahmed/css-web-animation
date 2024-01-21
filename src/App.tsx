@@ -4,6 +4,8 @@ import 'animate.css';
 function App() {
   const name = 'Programming Hero';
   const nameArr = name.split('');
+  const items = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js'];
+
   
   return (
     <div className="main">
@@ -30,11 +32,21 @@ function App() {
 <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur ullam debitis aliquam voluptates delectus possimus fuga dignissimos dolore saepe tempora!</h4>
     </div>
     </div> */}
-      <div className="container">
+      {/* <div className="container">
         {nameArr.map((letter, i) => (
           <span className="letter" style={{ transitionDelay: `${i * 50}ms` }}>{letter}</span>
         ))}
-      </div>
+      </div> */}
+      <ul className="tech-list">
+        {items.map((tech, index) => (
+          <li key={index} className="tech-item">
+            <div className="tech-content" style={{ transitionDelay: `${index * 50}ms` }}>
+              <span className="tech-name">{tech}</span>
+              <span className="tech-icon">🚀</span>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
