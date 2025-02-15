@@ -11,31 +11,34 @@ align-items: center;
 /* button css------------ */
 /* button css------------ */
 .btn {
-  border: 2px solid orange;
+  border: 2px solid rgba(255, 166, 0, 0.904);
   color: transparent;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   background-color: transparent;
   position: relative;
   overflow: hidden;
+  height: 200px;
+  width:200px ;
 }
 
 .btn::after {
   content: "";
+  padding-top: 100px;
   height: 100%;
   width: 100%;
-  border-radius: 50%;
-  background-color: orangered;
+  
+  background-color: rgba(255, 68, 0, 0.315);
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(-100%, -100%);
-    transform: rotate(120deg); 
-   transform: scaleX(0.00001); 
-  transform: translate(100%);
+  /* transform: translate(-100%, -100%); */
+    /* transform: rotate(120deg);  */
+   transform: scaleY(0.00001); 
+  transform: translateY(100%);
 
   transition-duration: 500ms;
   transition-timing-function: ease;
-  z-index: -1;
+  z-index: 1;
 }
 
 .btn:hover {
@@ -45,10 +48,26 @@ align-items: center;
 .btn:hover::after {
   transform: translate(0) scale(2);
    transform: rotate(0) scale(1.1);
-  transform: scaleX(1.1);
+  transform: scaleY(1.1);
 
 } 
+.img{
+  height: 200px;
+  width: 200px;
+  z-index: -2;
+}
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: transform 500ms ease; /* Add transition for smooth animation */
+}
 
+.btn:hover .button-text {
+  transform: translate(-50%, -50%) scale(2); /* Scale the text on hover */
+}
 
 
 /* sunrise animation css---------------------- */

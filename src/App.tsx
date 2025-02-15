@@ -1,6 +1,6 @@
 import "./App.css";
 import 'animate.css';
-
+import img from '../src/assets/right-side.jpg'
 function App() {
   const name = 'Programming Hero';
   const nameArr = name.split('');
@@ -9,9 +9,14 @@ function App() {
   
   return (
     <div className="main">
-        {/* <button className="btn"></button>  */}
-     {/* <div className="box">Box</div>  */}
-     {/* <div className="loading">
+      <button className="btn">
+        <img className="img" src={img} alt="" />
+        <h1>Subscribe Now</h1>
+        <span className="button-text">Donate Now</span>
+
+      </button>
+      {/* <div className="box">Box</div>  */}
+      {/* <div className="loading">
       <div className="glass"></div>
       <div className="box-1">1</div>
       <div className="box-2">2</div>
@@ -22,7 +27,7 @@ function App() {
       <div className="box-7">7</div>
       <div className="box-8">8</div>
     </div>  */}
-    {/* <div className="card-parent ">
+      {/* <div className="card-parent ">
       <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minus eaque? Aut enim quisquam blanditiis ratione doloribus reprehenderit quos ut.</h3>
     <div className="card">
       <div className="card-child">
@@ -37,7 +42,7 @@ function App() {
           <span className="letter" style={{ transitionDelay: `${i * 50}ms` }}>{letter}</span>
         ))}
       </div> */}
-      <ul className="tech-list">
+      {/* <ul className="tech-list">
         {items.map((tech, index) => (
           <li key={index} className="tech-item">
             <div className="tech-content" style={{ transitionDelay: `${index * 50}ms` }}>
@@ -46,7 +51,7 @@ function App() {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
